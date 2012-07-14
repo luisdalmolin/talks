@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="charset" content="UTF-8" />
+		<title>jQuery | Write less, do More</title>
+		
+		
+		<link href="css/style.css" type="text/css" rel="stylesheet" />
+		<link href="css/redmond/jquery-ui-1.8.10.custom.css" type="text/css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="fancybox/jquery.fancybox-1.3.4.css" media="screen" />
+        	
+		<script type="text/javascript" src="js/jquery-1.4.4.min.js"></script>
+		<script type="text/javascript" src="js/jquery-ui-1.8.10.custom.min.js"></script>
+        <script type="text/javascript" src="fancybox/jquery.fancybox-1.3.4.pack.js"></script>	
+		<script type="text/javascript" src="js/apresentacao.js"></script>
+	</head>
+	
+	<body>
+		<header>
+        	jQuery | Write less, do More <span>Luís Dalmolin | <a href="http://luisdalmolin.com.br">http://luisdalmolin.com.br</a>
+        </header>
+		
+		<a href="#1" id="seta-esquerda" class="seta seta-esquerda"></a><!-- #seta-esquerda -->
+		<a href="#2" id="seta-direita" class="seta seta-direita"></a><!-- #seta-direita -->
+		
+		<div class="lista-slides">
+			<div class="slide slide-1" id="slide-1">
+				<h1>jQuery - Write less, do more</h1>
+
+				<h3>O que é?</h3>
+				<p>É uma biblioteca javascript. "Write less, do more" é o 'lema'. Ou seja, escreva menos e faça mais.</p>
+				<p>Atualmente na versão <strong>1.5.1</strong>.
+                
+				<h3>Vantagens:</h3>
+				<ul>
+					<li>Tem uma comunidade muito ampla.</li>
+					<li>Curva de aprendizado pequena.</li>
+					<li>Cross-Browser, funciona em todos browsers utilizados hoje em dia. Até mesmo no IE6.</li>
+				</ul>
+					
+				<p>Algumas das maiores empresas do mundo estão usando jQuery, como Google, Dell, Mozilla, Wordpress e muito mais.</p>
+					
+
+				<h3>Diferença de sintaxe:</h3>
+				
+				<h5 style="margin-bottom:5px;">Javascript</h5>
+<pre>
+var divs = documet.getElementByTagName(‘div’);
+for( i = 0; i < divs.length; i++) {
+    divs[i].style.display = ‘none’;
+}
+</pre>
+
+				<h5 style="margin-bottom:5px;">jQuery</h5>
+<pre>$(‘div’).hide();</pre>
+
+					
+				<p>Onde baixar?
+					- <a href="http://jquery.com/" target="_blank">http://jquery.com/</a> <br />
+				Documentação:
+					- <a href="http://docs.jquery.com/Main_Page" target="_blank">http://docs.jquery.com/Main_Page</a></p>
+			</div><!-- .slide -->
+			
+			
+			
+			<div class="slide slide-2" id="slide-2">
+				<h1>Seletores</h1>
+				
+				<p>Para consultar diretamente no site a listagem completa, acesse: <a href="http://api.jquery.com/all-selector/">http://api.jquery.com/all-selector/</a></p>
+
+				<p>A maioria dos seletores funciona com as regras do CSS, abaixo seguem alguns exemplos:</p>
+
+				<h4>Selecionando pela classe do elemento.</h4>
+<pre>$('.link')</pre>
+
+				<h4>Selecionando pelo ID do elemento.</h4>
+<pre>$('#id_do_elemento)</pre>
+
+				<h4>Pelo tipo</h4>
+<pre>$('input[type=text]')</pre>
+
+				<h4>Seletores avançados</h4>
+<pre>
+$('.link:not(#id_nao_selecionado)')
+$('li:last-child')
+</pre>
+			</div><!-- .slide -->
+			
+			
+			<div class="slide slide-3" id="slide-3">
+				<h1>Funções básicas</h1>
+
+<pre>
+$('#id').addClass('selecionado');
+</pre>
+
+<pre>
+<a href="http://google.com" class="link">Link</a>
+
+&lt;a href="http://google.com" class="link"&gt;Link&lt;/a&gt;
+$('.link').click(function(e) {
+    e.preventDefault();
+	
+    alert( $(this).attr('href') );
+});
+</pre>
+
+<pre>
+<a href="#" class="minhaClasse">Passe o mouse</a>
+
+&lt;a href="#" class="minhaClasse"&gt;Passe o mouse&lt;/a&gt;
+$(‘.minhaClasse’).hover(
+    function() {
+        $(this).stop().animate({ ‘margin-left’ : ‘15px’ }, 200);
+    }, function() {
+        $(this).animate({ ‘margin-left’ : ‘0px’ }, 200);
+    }
+);
+</pre>
+			</div><!-- #slide-3 -->
+			
+		</div>
+		
+		
+		
+		
+		<div class="slide slide-4" id="slide-4">
+			<h1>jQuery UI</h1>
+			
+            <p>Framework jQuery, que utiliza a biblioteca. <a href="http://jqueryui.com/">http://jqueryui.com/</a></p>
+            
+			<h3>Datepicker e botão</h3>			
+<pre>
+$('.data').datepicker();
+$('.botao').button();
+</pre>
+			<input type"text" class="data" />
+			<input type="button" value="Enviar" class="botao" />
+			
+			<hr />
+			
+			<h3>Carregando <a href="#loader" id="carregar">clique para carregar</a></h3>
+<pre>
+$( "#loader" ).progressbar({
+	value: 100
+});
+</pre>
+			<div id="loader"></div>
+			
+			<hr />
+			
+            <h3>Dialogo / Modal</h3>
+            <a href="#!modal" id="abre-dialogo">Abrir janela</a>
+            <div id="dialog-message" title="Mensagem" style="display:none;">Mensagem Modal</div>
+		</div>
+		
+		
+		<div class="slide slide-5" id="slide-5">
+        	<h1>jQuery UI</h1>
+            
+			<h3>Tabs</h3>
+			
+<pre>
+$('#tabs').tabs();
+&lt;div id=&quot;tabs&quot;&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&quot;#tabs-1&quot;&gt;Nunc tincidunt&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#tabs-2&quot;&gt;Proin dolor&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#tabs-3&quot;&gt;Aenean lacinia&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div id=&quot;tabs-1&quot;&gt;&lt;/div&gt;
+    &lt;div id=&quot;tabs-1&quot;&gt;&lt;/div&gt;
+    &lt;div id=&quot;tabs-1&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+            
+			<div id="tabs">
+				<ul>
+					<li><a href="#tabs-1">Nunc tincidunt</a></li>
+					<li><a href="#tabs-2">Proin dolor</a></li>
+					<li><a href="#tabs-3">Aenean lacinia</a></li>
+				</ul>
+				<div id="tabs-1">
+					<p>Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.</p>
+				</div>
+				<div id="tabs-2">
+					<p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.</p>
+				</div>
+				<div id="tabs-3">
+					<p>Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales. Quisque eu urna vel enim commodo pellentesque. Praesent eu risus hendrerit ligula tempus pretium. Curabitur lorem enim, pretium nec, feugiat nec, luctus a, lacus.</p>
+					<p>Duis cursus. Maecenas ligula eros, blandit nec, pharetra at, semper at, magna. Nullam ac lacus. Nulla facilisi. Praesent viverra justo vitae neque. Praesent blandit adipiscing velit. Suspendisse potenti. Donec mattis, pede vel pharetra blandit, magna ligula faucibus eros, id euismod lacus dolor eget odio. Nam scelerisque. Donec non libero sed nulla mattis commodo. Ut sagittis. Donec nisi lectus, feugiat porttitor, tempor ac, tempor vitae, pede. Aenean vehicula velit eu tellus interdum rutrum. Maecenas commodo. Pellentesque nec elit. Fusce in lacus. Vivamus a libero vitae lectus hendrerit hendrerit.</p>
+				</div>
+			</div><!-- #tabs -->
+            
+			<hr />
+			
+			<h3>Autocompletar</h3>
+            <input type="text" id="tags" />
+<pre>
+var availableTags = [
+    "jQuery", 
+    "Feevale"
+];
+$( "#tags" ).autocomplete({
+    source: availableTags
+});
+</pre>			
+            <br />
+		</div><!-- #slide-5 -->
+		
+        
+        
+        <div class="slide slide-6" id="slide-6">
+        	<h1>Plugins</h1>
+            
+            <p>No jQuery, existem milhares de plugins prontos que você pode utilizar.</p>
+            <p>Para validação de formulários, galerias de imagens, banners, lightbox, janelas modais e assim vai. O site oficial para achar plugins é um subdomínio do próprio site da jQuery, <a href="http://plugins.jquery.com/" target="_blank">http://plugins.jquery.com/</a>. Mas também existem milhares de sites onde se pode achar.</p>
+            
+            <h3>Fancybox</h3>
+            <a href="images/wallpaper-41080.jpg" rel="zoom">
+            	<img src="images/wallpaper-41080.jpg" alt="" width="150" /> 
+            </a>
+            
+            <a href="images/wallpaper-85023.jpg" rel="zoom">
+            	<img src="images/wallpaper-85023.jpg" alt="" width="150" />
+            </a>
+            
+            <a href="images/wallpapers-3d-1280.jpg" rel="zoom">
+            	<img src="images/wallpapers-3d-1280.jpg" alt="" width="150" />
+            </a>
+<br /><br />       
+<pre>
+&lt;a href=&quot;images/wallpaper-41080.jpg&quot; rel=&quot;zoom&quot;&gt;
+    &lt;img src=&quot;images/wallpaper-41080.jpg&quot; alt=&quot;&quot; width=&quot;150&quot; /&gt;
+&lt;/a&gt;
+
+$('a[rel="zoom"]').fancybox();
+</pre>
+        </div><!-- #slide-6 -->
+        
+        
+        <div class="slide slide-7" id="slide-7">
+        	<h1>Criação de plugins</h1>
+            
+            <p>A criação de plugins já exige um conhecimente um pouco mais avançado. Abaixo segue um simples exemplo.</p>
+            
+<pre>
+(function($) {	
+    $.fn.pluginteste = function(options) {
+        var defaults = {
+            altura  : 200,
+            largura : 300,
+            tempo   : 5000
+        }		
+        var opt  = $.extend( defaults, options );
+        console.log('Altura: ' + opt.altura + ' | Largura: ' + opt.largura + ' | Tempo: ' + opt.tempo);	
+	}
+})(jQuery);
+
+$('a').pluginteste({ altura : 250, tempo : 750 });
+</pre>
+			<p>Pressione ctrl + shit + j para ver o console com o google chrome ou f12 com firefox.</p>
+        </div><!-- .slide -->
+        
+        
+        <div class="slide slide-8" id="slide-8">
+        	<h1>Animações</h1>
+            
+            <p>Para exemplificar como podem ser feitas animações, segue como esta apresentação foi feita.</p>
+            
+<pre>
+$(document).ready(function() {
+   var
+    x      = 1,
+    $slide = $('.slide'),
+    total  = $slide.lenght;
+    
+   // Esconde todos os slides
+   $('.slide').hide();
+
+   // Chama a função de exibir para começar a apresentação
+   exibir( $('#slide-' + x) );
+
+   $('.seta').click(function(e) { 
+       e.preventDefault();
+       var id = $(this).attr('id');
+
+       if( id == 'seta-direita' ) {
+           x++;
+           if( x > total )
+               x = 1;
+       } else {
+           x--;
+           if( x < 1 )
+               x = total;
+       }
+       $(this).attr('href', '#' + x);		
+       exibir( $('#slide-' + x) );	
+   });
+});
+</pre>
+        </div><!-- .slide -->
+        
+        
+        <div class="slide slide-9" id="slide-9">
+        	<h1>Ajax</h1>
+            
+            <p>Requisições em ajax com jQuery.</p>
+<pre>
+$.ajax({
+    url : 'pagina-ajax.php', 
+    type : 'POST', 
+    data : ({ acao : 'gerar-relatorio', id : 1 }), 
+    success : function(data) {
+        // retorno da pagina
+    }
+});
+
+
+// GET
+$.get('pagina.php', { acao : 'gerar-relatorio', id : 1 }, function(data) {
+	// retorno da pagina
+});
+
+// POST
+$.post('pagina.php', { acao : 'gerar-relatorio', id : 1 }, function(data) {
+	// retorno da pagina
+});
+</pre>
+        </div><!-- #slide-9 -->
+        
+        
+        <div class="slide slide-10" id="slide-10">
+        	<h1>jQuery Mobile</h1>
+            
+            <p>Ainda está na versão Alpha 3.</p>
+            <p>Cross-browser e Cross-plataform.</p>
+            
+            <p>Site: <a href="http://jquerymobile.com/" target="_blank">http://jquerymobile.com/</a></p>
+            <p>Documentação e demonstrção: <a href="http://jquerymobile.com/demos/1.0a3/" target="_blank">http://jquerymobile.com/demos/1.0a3/</a></p>
+
+<br />
+<h3>Como usar</h3>
+<pre>
+&lt;link href=&quot;_css/jquery.mobile.css&quot; type=&quot;text/css&quot; rel=&quot;stylesheet&quot; /&gt;
+
+&lt;script src=&quot;_js/jquery-1.4.3.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;_js/jquery.mobile-1.0a3.min.js&quot;&gt;&lt;/script&gt;
+</pre>
+
+			<p><a href="mobile" target="_blank">Exemplo de utilização.</a></p>
+        </div><!-- #slide-10 -->
+        
+<script type="text/javascript"> 
+ 
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-10402950-10']);
+  _gaq.push(['_trackPageview']);
+ 
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+ 
+</script> 
+	</body>
+</html>

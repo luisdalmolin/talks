@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Mobile</title>
+		
+		<link href="_css/jquery.mobile.css" type="text/css" rel="stylesheet" />
+		
+		<script src="_js/jquery-1.4.3.min.js"></script>
+		<script src="_js/jquery.mobile-1.0a3.min.js"></script>
+	</head>
+	
+	<body>
+		<div data-role="page">
+			<div data-role="header">
+				<h1>Jquery Mobile</h1>
+			</div><!-- /header -->
+
+			<div data-role="content">
+				
+				<!-- Busca -->
+				<div data-role="fieldcontain">
+					<label for="search">Busca:</label>
+					<input type="search" name="password" id="search" value="" />
+				</div>
+				
+				<!-- Slider -->
+				<div data-role="fieldcontain">
+					<label for="slider">Selecione a quantidade:</label>
+					<input type="range" name="slider" id="slider" value="0" min="0" max="100"  />
+				</div>				
+				
+				<!-- ON/Off -->
+				<div data-role="fieldcontain"> 
+					<label for="slider2">Liga/Desliga:</label> 
+					<select name="slider2" id="slider2" data-role="slider"> 
+						<option value="off">Off</option> 
+						<option value="on">On</option> 
+					</select> 
+				</div> 
+				
+				<!-- Checkbox -->
+				<div data-role="fieldcontain"> 
+					<fieldset data-role="controlgroup"> 
+						<legend>Salgadinhos:</legend> 
+						<input type="checkbox" name="checkbox-1a" id="checkbox-1a" class="custom" /> 
+						<label for="checkbox-1a">Cheetos</label> 
+		 
+						<input type="checkbox" name="checkbox-2a" id="checkbox-2a" class="custom" /> 
+						<label for="checkbox-2a">Doritos</label> 
+						
+						<input type="checkbox" name="checkbox-3a" id="checkbox-3a" class="custom" /> 
+						<label for="checkbox-3a">Fritos</label> 
+		 
+						<input type="checkbox" name="checkbox-4a" id="checkbox-4a" class="custom" /> 
+						<label for="checkbox-4a">Sun Chips</label> 
+					</fieldset> 
+					</div> 
+				
+				<!-- Radio Box -->
+				<div data-role="fieldcontain">
+					<fieldset data-role="controlgroup">
+						<legend>Escolha uma opção:</legend>
+							<input type="radio" name="radio-choice-1" id="radio-choice-1" value="choice-1" checked="checked" />
+							<label for="radio-choice-1">Site</label>
+
+							<input type="radio" name="radio-choice-1" id="radio-choice-2" value="choice-2"  />
+							<label for="radio-choice-2">Mobile</label>
+
+							<input type="radio" name="radio-choice-1" id="radio-choice-3" value="choice-3"  />
+							<label for="radio-choice-3">Sitema</label>
+					</fieldset>
+				</div>
+				
+				<!-- Select -->
+				<div data-role="fieldcontain"> 
+					<label for="select-choice-1" class="select">Choose shipping method:</label> 
+					<select name="select-choice-1" id="select-choice-1"> 
+						<option value="standard">Standard: 7 day</option> 
+						<option value="rush">Rush: 3 days</option> 
+						<option value="express">Express: next day</option> 
+						<option value="overnight">Overnight</option> 
+					</select> 
+				</div> 
+				
+				<div data-role="fieldcontain">
+				    <input type="submit" value="Enviar" />
+				</div>
+			</div><!-- /content -->
+
+			<div data-role="footer">
+				<h4>Rodapé</h4>
+			</div><!-- /header -->
+		</div><!-- /page -->
+	</body>
+</html>
