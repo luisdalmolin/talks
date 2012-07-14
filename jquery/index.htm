@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ï»¿<!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="UTF-8" />
@@ -17,7 +17,7 @@
 	
 	<body>
 		<header>
-        	jQuery | Write less, do More <span>Luís Dalmolin | <a href="http://luisdalmolin.com.br">http://luisdalmolin.com.br</a>
+        	jQuery | Write less, do More <span>LuÃ­s Dalmolin | <a href="http://luisdalmolin.com.br">http://luisdalmolin.com.br</a>
         </header>
 		
 		<a href="#1" id="seta-esquerda" class="seta seta-esquerda"></a><!-- #seta-esquerda -->
@@ -27,37 +27,37 @@
 			<div class="slide slide-1" id="slide-1">
 				<h1>jQuery - Write less, do more</h1>
 
-				<h3>O que é?</h3>
-				<p>É uma biblioteca javascript. "Write less, do more" é o 'lema'. Ou seja, escreva menos e faça mais.</p>
-				<p>Atualmente na versão <strong>1.5.1</strong>.
+				<h3>O que Ã©?</h3>
+				<p>Ã‰ uma biblioteca javascript. "Write less, do more" Ã© o 'lema'. Ou seja, escreva menos e faÃ§a mais.</p>
+				<p>Atualmente na versÃ£o <strong>1.5.1</strong>.
                 
 				<h3>Vantagens:</h3>
 				<ul>
 					<li>Tem uma comunidade muito ampla.</li>
 					<li>Curva de aprendizado pequena.</li>
-					<li>Cross-Browser, funciona em todos browsers utilizados hoje em dia. Até mesmo no IE6.</li>
+					<li>Cross-Browser, funciona em todos browsers utilizados hoje em dia. AtÃ© mesmo no IE6.</li>
 				</ul>
 					
-				<p>Algumas das maiores empresas do mundo estão usando jQuery, como Google, Dell, Mozilla, Wordpress e muito mais.</p>
+				<p>Algumas das maiores empresas do mundo estÃ£o usando jQuery, como Google, Dell, Mozilla, Wordpress e muito mais.</p>
 					
 
-				<h3>Diferença de sintaxe:</h3>
+				<h3>DiferenÃ§a de sintaxe:</h3>
 				
 				<h5 style="margin-bottom:5px;">Javascript</h5>
 <pre>
-var divs = documet.getElementByTagName(‘div’);
+var divs = documet.getElementByTagName(â€˜divâ€™);
 for( i = 0; i < divs.length; i++) {
-    divs[i].style.display = ‘none’;
+    divs[i].style.display = â€˜noneâ€™;
 }
 </pre>
 
 				<h5 style="margin-bottom:5px;">jQuery</h5>
-<pre>$(‘div’).hide();</pre>
+<pre>$(â€˜divâ€™).hide();</pre>
 
 					
 				<p>Onde baixar?
 					- <a href="http://jquery.com/" target="_blank">http://jquery.com/</a> <br />
-				Documentação:
+				DocumentaÃ§Ã£o:
 					- <a href="http://docs.jquery.com/Main_Page" target="_blank">http://docs.jquery.com/Main_Page</a></p>
 			</div><!-- .slide -->
 			
@@ -79,7 +79,7 @@ for( i = 0; i < divs.length; i++) {
 				<h4>Pelo tipo</h4>
 <pre>$('input[type=text]')</pre>
 
-				<h4>Seletores avançados</h4>
+				<h4>Seletores avanÃ§ados</h4>
 <pre>
 $('.link:not(#id_nao_selecionado)')
 $('li:last-child')
@@ -88,7 +88,7 @@ $('li:last-child')
 			
 			
 			<div class="slide slide-3" id="slide-3">
-				<h1>Funções básicas</h1>
+				<h1>FunÃ§Ãµes bÃ¡sicas</h1>
 
 <pre>
 $('#id').addClass('selecionado');
@@ -109,11 +109,11 @@ $('.link').click(function(e) {
 <a href="#" class="minhaClasse">Passe o mouse</a>
 
 &lt;a href="#" class="minhaClasse"&gt;Passe o mouse&lt;/a&gt;
-$(‘.minhaClasse’).hover(
+$(â€˜.minhaClasseâ€™).hover(
     function() {
-        $(this).stop().animate({ ‘margin-left’ : ‘15px’ }, 200);
+        $(this).stop().animate({ â€˜margin-leftâ€™ : â€˜15pxâ€™ }, 200);
     }, function() {
-        $(this).animate({ ‘margin-left’ : ‘0px’ }, 200);
+        $(this).animate({ â€˜margin-leftâ€™ : â€˜0pxâ€™ }, 200);
     }
 );
 </pre>
@@ -129,7 +129,7 @@ $(‘.minhaClasse’).hover(
 			
             <p>Framework jQuery, que utiliza a biblioteca. <a href="http://jqueryui.com/">http://jqueryui.com/</a></p>
             
-			<h3>Datepicker e botão</h3>			
+			<h3>Datepicker e botÃ£o</h3>			
 <pre>
 $('.data').datepicker();
 $('.botao').button();
@@ -213,8 +213,8 @@ $( "#tags" ).autocomplete({
         <div class="slide slide-6" id="slide-6">
         	<h1>Plugins</h1>
             
-            <p>No jQuery, existem milhares de plugins prontos que você pode utilizar.</p>
-            <p>Para validação de formulários, galerias de imagens, banners, lightbox, janelas modais e assim vai. O site oficial para achar plugins é um subdomínio do próprio site da jQuery, <a href="http://plugins.jquery.com/" target="_blank">http://plugins.jquery.com/</a>. Mas também existem milhares de sites onde se pode achar.</p>
+            <p>No jQuery, existem milhares de plugins prontos que vocÃª pode utilizar.</p>
+            <p>Para validaÃ§Ã£o de formulÃ¡rios, galerias de imagens, banners, lightbox, janelas modais e assim vai. O site oficial para achar plugins Ã© um subdomÃ­nio do prÃ³prio site da jQuery, <a href="http://plugins.jquery.com/" target="_blank">http://plugins.jquery.com/</a>. Mas tambÃ©m existem milhares de sites onde se pode achar.</p>
             
             <h3>Fancybox</h3>
             <a href="images/wallpaper-41080.jpg" rel="zoom">
@@ -240,9 +240,9 @@ $('a[rel="zoom"]').fancybox();
         
         
         <div class="slide slide-7" id="slide-7">
-        	<h1>Criação de plugins</h1>
+        	<h1>CriaÃ§Ã£o de plugins</h1>
             
-            <p>A criação de plugins já exige um conhecimente um pouco mais avançado. Abaixo segue um simples exemplo.</p>
+            <p>A criaÃ§Ã£o de plugins jÃ¡ exige um conhecimente um pouco mais avanÃ§ado. Abaixo segue um simples exemplo.</p>
             
 <pre>
 (function($) {	
@@ -264,9 +264,9 @@ $('a').pluginteste({ altura : 250, tempo : 750 });
         
         
         <div class="slide slide-8" id="slide-8">
-        	<h1>Animações</h1>
+        	<h1>AnimaÃ§Ãµes</h1>
             
-            <p>Para exemplificar como podem ser feitas animações, segue como esta apresentação foi feita.</p>
+            <p>Para exemplificar como podem ser feitas animaÃ§Ãµes, segue como esta apresentaÃ§Ã£o foi feita.</p>
             
 <pre>
 $(document).ready(function() {
@@ -278,7 +278,7 @@ $(document).ready(function() {
    // Esconde todos os slides
    $('.slide').hide();
 
-   // Chama a função de exibir para começar a apresentação
+   // Chama a funÃ§Ã£o de exibir para comeÃ§ar a apresentaÃ§Ã£o
    exibir( $('#slide-' + x) );
 
    $('.seta').click(function(e) { 
@@ -305,7 +305,7 @@ $(document).ready(function() {
         <div class="slide slide-9" id="slide-9">
         	<h1>Ajax</h1>
             
-            <p>Requisições em ajax com jQuery.</p>
+            <p>RequisiÃ§Ãµes em ajax com jQuery.</p>
 <pre>
 $.ajax({
     url : 'pagina-ajax.php', 
@@ -333,11 +333,11 @@ $.post('pagina.php', { acao : 'gerar-relatorio', id : 1 }, function(data) {
         <div class="slide slide-10" id="slide-10">
         	<h1>jQuery Mobile</h1>
             
-            <p>Ainda está na versão Alpha 3.</p>
+            <p>Ainda estÃ¡ na versÃ£o Alpha 3.</p>
             <p>Cross-browser e Cross-plataform.</p>
             
             <p>Site: <a href="http://jquerymobile.com/" target="_blank">http://jquerymobile.com/</a></p>
-            <p>Documentação e demonstrção: <a href="http://jquerymobile.com/demos/1.0a3/" target="_blank">http://jquerymobile.com/demos/1.0a3/</a></p>
+            <p>DocumentaÃ§Ã£o e demonstrÃ§Ã£o: <a href="http://jquerymobile.com/demos/1.0a3/" target="_blank">http://jquerymobile.com/demos/1.0a3/</a></p>
 
 <br />
 <h3>Como usar</h3>
@@ -348,7 +348,7 @@ $.post('pagina.php', { acao : 'gerar-relatorio', id : 1 }, function(data) {
 &lt;script src=&quot;_js/jquery.mobile-1.0a3.min.js&quot;&gt;&lt;/script&gt;
 </pre>
 
-			<p><a href="mobile" target="_blank">Exemplo de utilização.</a></p>
+			<p><a href="mobile" target="_blank">Exemplo de utilizaÃ§Ã£o.</a></p>
         </div><!-- #slide-10 -->
         
 <script type="text/javascript"> 
